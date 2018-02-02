@@ -2248,15 +2248,3 @@ body {
   -webkit-transition: 0.2s background ease-in-out;
   transition: 0.2s background ease-in-out;
 }
-.cid-qHXMlA4bpt {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  background: linear-gradient(0deg, #073b4c, #cccccc);
-}
-.cid-qHXMlA4bpt .mbr-iconfont-social {
-  font-size: 32px;
-  color: #ff3366;
-}
-.cid-qHXMlA4bpt .social-list a:focus {
-  text-decoration: none;
-}
