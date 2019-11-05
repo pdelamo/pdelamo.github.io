@@ -195,252 +195,273 @@
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/piratejpg-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/piratejpg-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/test5-1-2000x2000.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/test5-1-2000x2000-800x800.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": true,
+                "title": ""
               },
               {
                 "tags": "Animated",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/wwwsaloonphotosop-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/wwwsaloonphotosop-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/test2-1-2000x2000.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/test2-1-2000x2000-800x800.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Animated",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/beast-done-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/beast-done-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/mafioso2-1920x1089.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/mafioso2-1920x1089-800x454.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Responsive",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/accobra-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/accobra-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/stylized-cartoon-resumen-con-render-2000x1125.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/stylized-cartoon-resumen-con-render-2000x1125-800x450.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Awesome",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/monocopter-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/monocopter-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/deepspace-1-1920x1080.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/deepspace-1-1920x1080-800x450.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Awesome",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/gangs-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/gangs-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/monocopter-1-1920x1080.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/monocopter-1-1920x1080-800x450.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Responsive",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/ppsh-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/ppsh-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/accobra-1-1920x1080.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/accobra-1-1920x1080-800x450.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Animated",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/minion-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/minion-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/moto-2000x1124.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/moto-2000x1124-800x450.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Creative",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/deepspace-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/deepspace-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/www-set-wire-1907x1039.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/www-set-wire-1907x1039-800x436.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Awesome",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/saber-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/saber-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/pruebawww1-1920x1080.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/pruebawww1-1920x1080-800x450.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Animated",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/3-4-1424x909.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/3-4-1424x909-800x510.jpg",
+                "image": "@PROJECT_PATH@/assets/images/back-1-2000x2000.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/back-1-2000x2000-800x800.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Animated",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/front-1278x893.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/front-1278x893-800x558.jpg",
+                "image": "@PROJECT_PATH@/assets/images/faraon-1-2000x2000.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/faraon-1-2000x2000-800x800.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Animated",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/front-blodybody-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/front-blodybody-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/minion-1-1920x1080.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/minion-1-1920x1080-800x450.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Responsive",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/test5-2000x2000.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/test5-2000x2000-800x800.jpg",
+                "image": "@PROJECT_PATH@/assets/images/render-general-1-2000x2000.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/render-general-1-2000x2000-800x800.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Responsive",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/test2-2000x2000.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/test2-2000x2000-800x800.jpg",
+                "image": "@PROJECT_PATH@/assets/images/pirate-1920x1080.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/pirate-1920x1080-800x450.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Responsive",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/faraon-2000x2000.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/faraon-2000x2000-800x800.jpg",
+                "image": "@PROJECT_PATH@/assets/images/render-smoke-4k-2000x3931.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/render-smoke-4k-2000x3931-800x1572.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Responsive",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/back-2000x2000.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/back-2000x2000-800x800.jpg",
+                "image": "@PROJECT_PATH@/assets/images/render-side-no-cloak-1-1024x1024.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/render-side-no-cloak-1-1024x1024-800x800.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Responsive",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/render-general-2000x2000.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/render-general-2000x2000-800x800.jpg",
+                "image": "@PROJECT_PATH@/assets/images/pechaminoso-berserker-2000x1927.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/pechaminoso-berserker-2000x1927-800x771.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Responsive",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/render-smoke-4k-2000x3930.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/render-smoke-4k-2000x3930-800x1572.jpg",
+                "image": "@PROJECT_PATH@/assets/images/screenshot001jpg-1-1920x1080.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/screenshot001jpg-1-1920x1080-800x450.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Responsive",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/render-side-no-cloak-1024x1024.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/render-side-no-cloak-1024x1024-800x800.jpg",
+                "image": "@PROJECT_PATH@/assets/images/sabertooth-1920x1080.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/sabertooth-1920x1080-800x450.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Responsive",
                 "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@PROJECT_PATH@/assets/images/screenshot001jpg-1920x1080.jpg",
-                "thumb": "@PROJECT_PATH@/assets/images/screenshot001jpg-1920x1080-800x450.jpg",
+                "image": "@PROJECT_PATH@/assets/images/gangs-1-1920x1080.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/gangs-1-1920x1080-800x450.jpg",
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": false
+                "active": false,
+                "title": ""
               },
               {
                 "tags": "Responsive",
@@ -452,7 +473,20 @@
                 "alt": "",
                 "customStyle1": "display-7",
                 "caption": "Type caption here",
-                "active": true
+                "active": false
+              },
+              {
+                "tags": "Responsive",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/ppsh-1-1920x1080.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/ppsh-1-1920x1080-800x450.jpg",
+                "alt": "",
+                "customStyle1": "display-7",
+                "caption": "Type caption here",
+                "active": false,
+                "title": ""
               }
             ]
           }
