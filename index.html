@@ -100,7 +100,7 @@ nav,footer{position:relative;z-index:2}
 .albums-divider{display:flex;align-items:center;gap:24px;margin-bottom:48px}
 .albums-divider::before,.albums-divider::after{content:'';flex:1;height:1px;background:var(--line)}
 .albums-divider-label{font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--dimmed);text-transform:uppercase;white-space:nowrap}
-.albums-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.albums-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px}
 .album-card{position:relative;overflow:hidden;display:block;text-decoration:none;aspect-ratio:2/3;background:var(--bg3);cursor:none}
 .album-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(.45) brightness(.4);transition:transform .8s,filter .6s}
 .album-card:hover .album-bg{transform:scale(1.06);filter:saturate(.75) brightness(.55)}
@@ -386,11 +386,6 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
         <div class="album-overlay"></div>
         <div class="album-content"><span class="album-count">02</span><h3 class="album-title">Props</h3><p class="album-desc">Hero props, tactical devices and production-ready mechanical assets.</p><span class="album-cta">View Collection →</span></div>
       </a>
-      <a href="#" class="album-card reveal reveal-delay-2" onclick="showPage('environments');return false">
-        <div class="album-bg" style="background-image:url('assets/miniaturas/enviro.jpg');background-position:center top"></div>
-        <div class="album-overlay"></div>
-        <div class="album-content"><span class="album-count">03</span><h3 class="album-title">Environments</h3><p class="album-desc">Set dressing and environment hero assets.</p><span class="album-cta">View Collection →</span></div>
-      </a>
     </div>
   </section>
   <section id="pipeline">
@@ -610,6 +605,24 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             </div>
             <button class="render-bar-btn" onclick="openLightbox('rev',0)">View all renders →</button>
           </div>
+        </div>
+        <div class="sb-panel" id="sbpanel-props-3" style="display:none">
+          <div class="sb-panel-hero" onclick="openLightbox('asia',0)">
+            <img src="assets/renders/env_1.jpg" alt="Asian Street House">
+            <div class="sb-panel-hero-overlay">
+              <div class="sb-panel-meta">Environment · Stylized · Diorama · 2024</div>
+              <div class="sb-panel-title">Asian Street House</div>
+              <div class="sb-panel-cta">View all 1 renders →</div>
+            </div>
+          </div>
+          <div class="render-bar">
+            <div class="render-bar-left">
+              <div><div class="render-bar-count">01</div><div class="render-bar-label">Renders</div></div>
+              <div class="render-bar-divider"></div>
+              <div class="render-bar-meta">Blender · Cycles · Substance</div>
+            </div>
+            <button class="render-bar-btn" onclick="openLightbox('asia',0)">View all renders →</button>
+          </div>
         </div></div>
   </div>
 </div>
@@ -639,6 +652,11 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
           <img src="assets/renders/ph_1.jpg" alt="TA-312 Field Phone">
           <div class="sb-thumb-label">TA-312 Field Phone</div>
           <div class="sb-thumb-count">4</div>
+        </div>
+        <div class="sb-thumb" onclick="sbSelect('props',3)">
+          <img src="assets/miniaturas/enviro.jpg" alt="Asian Street House">
+          <div class="sb-thumb-label">Asian House</div>
+          <div class="sb-thumb-count">1</div>
         </div></div>
     <div class="sb-content">
         <div class="sb-panel" id="sbpanel-props-0" style="display:flex">
@@ -694,28 +712,8 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             </div>
             <button class="render-bar-btn" onclick="openLightbox('phone',0)">View all renders →</button>
           </div>
-        </div></div>
-  </div>
-</div>
-<div class="album-page" id="page-environments">
-  <div class="album-page-header">
-    <a href="#" class="back-btn" onclick="showPage('home');return false">
-      <div class="back-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <span>Back to Work</span>
-    </a>
-    <p class="album-page-eyebrow">03 · Collection</p>
-    <h2 class="album-page-title">Environments</h2>
-    <p class="album-page-desc">Environment hero assets and stylized dioramas.</p>
-  </div>
-  <div class="sb-layout">
-    <div class="sb-sidebar" id="sbsidebar-environments">
-        <div class="sb-thumb sb-active" onclick="sbSelect('environments',0)">
-          <img src="assets/miniaturas/enviro.jpg" alt="Asian Street House">
-          <div class="sb-thumb-label">Asian Street House</div>
-          <div class="sb-thumb-count">1</div>
-        </div></div>
-    <div class="sb-content">
-        <div class="sb-panel" id="sbpanel-environments-0" style="display:flex">
+        </div>
+        <div class="sb-panel" id="sbpanel-props-3" style="display:none">
           <div class="sb-panel-hero" onclick="openLightbox('asia',0)">
             <img src="assets/renders/env_1.jpg" alt="Asian Street House">
             <div class="sb-panel-hero-overlay">
