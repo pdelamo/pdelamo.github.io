@@ -286,7 +286,75 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
 .render-bar-meta{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--dimmed);text-transform:uppercase}
 .render-bar-btn{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--white);border:1px solid rgba(255,255,255,.2);padding:12px 28px;background:transparent;cursor:none;transition:border-color .3s,color .3s;display:inline-flex;align-items:center;gap:10px}
 .render-bar-btn:hover{border-color:var(--red);color:var(--red)}
+
+/* ── B: TYPEWRITER ── */
+.typewriter-wrap { display: inline-block; }
+#tw-text { font-family: var(--serif); font-size: clamp(64px,8vw,116px); font-weight: 300; line-height: .9; color: var(--white); }
+#tw-text em { font-style: italic; color: var(--red); }
+.tw-cursor { font-family: var(--serif); font-size: clamp(64px,8vw,116px); font-weight: 100; color: var(--red); line-height: .9; animation: twBlink 0.8s step-end infinite; margin-left: 2px; }
+@keyframes twBlink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* ── D: CURTAIN REVEAL ── */
+.reveal-curtain { position: relative; overflow: hidden; }
+.reveal-curtain::after { content: ''; position: absolute; inset: 0; background: var(--red); transform: translateX(-101%); z-index: 10; }
+.reveal-curtain.curtain-sweep::after { animation: curtainSweep .6s cubic-bezier(.77,0,.175,1) forwards; }
+.reveal-curtain.curtain-done::after { transform: translateX(101%); }
+@keyframes curtainSweep { 0%{transform:translateX(-101%)} 45%{transform:translateX(0%)} 100%{transform:translateX(101%)} }
+
+/* ── PARALLAX SCROLL HINT ── */
+@media(max-width:900px) {
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  #stats { padding: 60px 24px; }
+}
+
+
+/* Curtain variant — white for dark sections */
+#contact .reveal-curtain::after { background: var(--red); }
+.statement-text.reveal-curtain::after { background: var(--red); }
+.sb-panel-title.reveal-curtain { overflow: visible; }
+
+
+/* ── REVEAL CLIP (horizontal text reveal, no red bar) ── */
+.reveal-clip {
+  clip-path: inset(0 100% 0 0);
+  opacity: 1 !important;
+  transform: none !important;
+  transition: clip-path 0.7s cubic-bezier(.77,0,.175,1);
+}
+.reveal-clip.visible {
+  clip-path: inset(0 0% 0 0);
+}
+
+/* ── REVEAL RISE (fade up, softer than default) ── */
+.reveal-rise {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(.23,1,.32,1);
+}
+.reveal-rise.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── REVEAL BLUR (blur to focus) ── */
+.reveal-blur {
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 1s ease, filter 1s ease;
+}
+.reveal-blur.visible {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* ── CURTAIN — keep only on main section headers ── */
+.section-header.reveal-curtain::after,
+.pipeline-header.reveal-curtain::after {
+  /* red curtain only on these */
+}
+
 </style>
+<!-- built: 2026-05-01 16:23:02 -->
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
@@ -346,17 +414,18 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
     <div class="carousel-overlay"></div>
     <div class="hero-content">
       <p class="hero-eyebrow">Hard Surface &nbsp;·&nbsp; Hero Props &nbsp;·&nbsp; Environments &nbsp;·&nbsp; Weapons<span class="hero-eyebrow-sub">Game-Ready Assets &nbsp;·&nbsp; Cinematic-Ready Assets</span></p>
-      <h1 class="hero-title">Pablo<br>del <em>Amo</em></h1>
+      <h1 class="hero-title"><span class="typewriter-wrap"><span id="tw-text"></span><span class="tw-cursor">|</span></span></h1>
       <a href="#work" class="hero-cta" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'});return false">View Work <span class="hero-cta-arrow">→</span></a>
     </div>
     <div class="hero-scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
   </section>
   <section id="statement">
-    <p class="statement-label reveal">Approach</p>
-    <p class="statement-text reveal reveal-delay-1">Full-pipeline 3D specialist<br>with a <em>specialist's precision.</em><br>From concept to game-ready.</p>
+    <p class="statement-label reveal reveal-clip">Approach</p>
+    <p class="statement-text reveal reveal-delay-1 reveal-blur">Full-pipeline 3D specialist<br>with a <em>specialist's precision.</em><br>From concept to game-ready.</p>
   </section>
+
   <section id="work">
-    <div class="section-header reveal"><h2 class="section-title">Selected <span>Work</span></h2></div>
+    <div class="section-header reveal reveal-curtain"><h2 class="section-title">Selected <span>Work</span></h2></div>
     <div class="strip-grid reveal">
       <div class="strip-item" onclick="openLightbox('smg',0)">
         <img src="assets/miniaturas/smg.jpg" alt="SMG-45">
@@ -390,7 +459,7 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
   </section>
   <section id="pipeline">
     <div class="pipeline-outer">
-      <div class="pipeline-header reveal"><p class="pipeline-label">Production Pipeline</p><p class="pipeline-desc">Two core workflows — and a track record of adapting fast to whatever a production requires.</p></div>
+      <div class="pipeline-header reveal reveal-curtain"><p class="pipeline-label">Production Pipeline</p><p class="pipeline-desc">Two core workflows — and a track record of adapting fast to whatever a production requires.</p></div>
       <div class="pipeline-track reveal">
         <div class="track-label"><span class="track-badge primary">Primary</span><span class="track-name">SUB-D Workflow</span><span class="track-note">Preferred for client iteration,<br>feedback loops and studio pipelines</span></div>
         <div class="track-steps">
@@ -419,8 +488,8 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
   </section>
   <section id="about">
     <div class="about-left reveal">
-      <p class="about-eyebrow">About</p>
-      <h2 class="about-title">3D Artist<br><em>& Specialist.</em></h2>
+      <p class="about-eyebrow reveal reveal-clip">About</p>
+      <h2 class="about-title reveal reveal-rise">3D Artist<br><em>& Specialist.</em></h2>
       <div class="about-image-wrapper">
         <img src="assets/profile/pablo.jpg" alt="Pablo del Amo">
         <div class="about-image-border"></div>
@@ -433,12 +502,12 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
         <p>I work remotely with international teams and I'm available for <strong>freelance contracts</strong>, outsourcing work, and full-time positions. Open to relocation for the right project.</p>
       </div>
       <div class="about-divider"></div>
-      <div class="tools-grid reveal reveal-delay-1">
+      <div class="tools-grid reveal reveal-delay-1 reveal-blur">
         <span class="tool-pill">Blender</span><span class="tool-pill">3ds Max</span><span class="tool-pill">Maya</span>
         <span class="tool-pill">ZBrush</span><span class="tool-pill">Fusion 360</span><span class="tool-pill">Substance Painter</span>
         <span class="tool-pill">Marmoset T4</span><span class="tool-pill">Unreal Engine 5</span><span class="tool-pill">Marvelous Designer</span>
       </div>
-      <ul class="experience-list reveal reveal-delay-2">
+      <ul class="experience-list reveal reveal-delay-2 reveal-rise">
         <li class="exp-item"><div><p class="exp-role">Weapon 3D Artist</p><p class="exp-company">Scattershot</p></div><span class="exp-date">2022 – 2023</span></li>
         <li class="exp-item"><div><p class="exp-role">3D Character Artist</p><p class="exp-company">Pentadimensional Games</p></div><span class="exp-date">2020</span></li>
         <li class="exp-item"><div><p class="exp-role">Set &amp; Props Artist</p><p class="exp-company">Skydance Animation</p></div><span class="exp-date">2018</span></li>
@@ -451,17 +520,17 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
     </div>
   </section>
   <section id="credits">
-    <p class="credits-label">Previously worked with</p>
-    <div class="credits-track">
+    <p class="credits-label reveal-clip">Previously worked with</p>
+    <div class="credits-track reveal-blur">
       <span class="credit-item">Scattershot</span><span class="credit-sep"></span>
       <span class="credit-item">Pentadimensional Games</span><span class="credit-sep"></span>
       <span class="credit-item">Skydance Animation</span>
     </div>
   </section>
   <section id="contact">
-    <p class="contact-eyebrow reveal">Available for work</p>
-    <h2 class="contact-title reveal reveal-delay-1">Let's<br><em>work</em><br>together.</h2>
-    <p class="contact-sub reveal reveal-delay-2">Freelance, outsourcing contracts and full-time opportunities.<br>Response within 24 hours.</p>
+    <p class="contact-eyebrow reveal reveal-clip">Available for work</p>
+    <h2 class="contact-title reveal reveal-delay-1 reveal-rise">Let's<br><em>work</em><br>together.</h2>
+    <p class="contact-sub reveal reveal-delay-2 reveal-blur">Freelance, outsourcing contracts and full-time opportunities.<br>Response within 24 hours.</p>
     <a href="mailto:pablo_delamo@hotmail.com" class="contact-email reveal reveal-delay-3">pablo_delamo@hotmail.com</a>
     <div class="contact-links reveal reveal-delay-4">
       <a href="https://www.linkedin.com/in/pablo-del-amo/" target="_blank" class="contact-link">↗ LinkedIn</a>
@@ -484,8 +553,8 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
       <div class="back-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <span>Back to Work</span>
     </a>
-    <p class="album-page-eyebrow">01 · Collection</p>
-    <h2 class="album-page-title">Weapons</h2>
+    <p class="album-page-eyebrow reveal-clip">01 · Collection</p>
+    <h2 class="album-page-title reveal-rise">Weapons</h2>
     <p class="album-page-desc">Hero-tier firearms and hard surface weapon assets.</p>
   </div>
   <div class="sb-layout">
@@ -521,7 +590,7 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             <img src="assets/renders/smg_1.jpg" alt="SMG-45">
             <div class="sb-panel-hero-overlay">
               <div class="sb-panel-meta">Weapon · Hard Surface · Scattershot · 2022</div>
-              <div class="sb-panel-title">SMG-45</div>
+              <div class="sb-panel-title reveal-rise">SMG-45</div>
               <div class="sb-panel-cta">View all 6 renders →</div>
             </div>
           </div>
@@ -539,7 +608,7 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             <img src="assets/renders/spas_1.jpg" alt="SPAS-12">
             <div class="sb-panel-hero-overlay">
               <div class="sb-panel-meta">Weapon · Shotgun · Hard Surface · 2026</div>
-              <div class="sb-panel-title">SPAS-12</div>
+              <div class="sb-panel-title reveal-rise">SPAS-12</div>
               <div class="sb-panel-cta">View all 5 renders →</div>
             </div>
           </div>
@@ -557,7 +626,7 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             <img src="assets/renders/car_1.jpg" alt="AC Carbine">
             <div class="sb-panel-hero-overlay">
               <div class="sb-panel-meta">Weapon · Assault Rifle · Scattershot · 2023</div>
-              <div class="sb-panel-title">AC Carbine</div>
+              <div class="sb-panel-title reveal-rise">AC Carbine</div>
               <div class="sb-panel-cta">View all 2 renders →</div>
             </div>
           </div>
@@ -575,7 +644,7 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             <img src="assets/renders/ak_1.jpg" alt="AK Rifle">
             <div class="sb-panel-hero-overlay">
               <div class="sb-panel-meta">Weapon · Assault Rifle · Scattershot · 2023</div>
-              <div class="sb-panel-title">AK Rifle</div>
+              <div class="sb-panel-title reveal-rise">AK Rifle</div>
               <div class="sb-panel-cta">View all 3 renders →</div>
             </div>
           </div>
@@ -593,7 +662,7 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             <img src="assets/renders/rev_1.jpg" alt="Handcannon Revolver">
             <div class="sb-panel-hero-overlay">
               <div class="sb-panel-meta">Weapon · Sci-Fi · Hero Asset · 2023</div>
-              <div class="sb-panel-title">Handcannon Revolver</div>
+              <div class="sb-panel-title reveal-rise">Handcannon Revolver</div>
               <div class="sb-panel-cta">View all 3 renders →</div>
             </div>
           </div>
@@ -611,7 +680,7 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             <img src="assets/renders/env_1.jpg" alt="Asian Street House">
             <div class="sb-panel-hero-overlay">
               <div class="sb-panel-meta">Environment · Stylized · Diorama · 2024</div>
-              <div class="sb-panel-title">Asian Street House</div>
+              <div class="sb-panel-title reveal-rise">Asian Street House</div>
               <div class="sb-panel-cta">View all 1 renders →</div>
             </div>
           </div>
@@ -632,8 +701,8 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
       <div class="back-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <span>Back to Work</span>
     </a>
-    <p class="album-page-eyebrow">02 · Collection</p>
-    <h2 class="album-page-title">Props</h2>
+    <p class="album-page-eyebrow reveal-clip">02 · Collection</p>
+    <h2 class="album-page-title reveal-rise">Props</h2>
     <p class="album-page-desc">Hard surface hero props, vehicles and mechanical assets.</p>
   </div>
   <div class="sb-layout">
@@ -664,7 +733,7 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             <img src="assets/renders/pz_1.jpg" alt="Panzer">
             <div class="sb-panel-hero-overlay">
               <div class="sb-panel-meta">Vehicle · Hard Surface · Military · 2022</div>
-              <div class="sb-panel-title">Panzer</div>
+              <div class="sb-panel-title reveal-rise">Panzer</div>
               <div class="sb-panel-cta">View all 4 renders →</div>
             </div>
           </div>
@@ -682,7 +751,7 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             <img src="assets/renders/hs_1.jpg" alt="HS Control Unit">
             <div class="sb-panel-hero-overlay">
               <div class="sb-panel-meta">Prop · Sci-Fi · Hard Surface · 2024</div>
-              <div class="sb-panel-title">HS Control Unit</div>
+              <div class="sb-panel-title reveal-rise">HS Control Unit</div>
               <div class="sb-panel-cta">View all 4 renders →</div>
             </div>
           </div>
@@ -700,7 +769,7 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             <img src="assets/renders/ph_1.jpg" alt="TA-312 Field Phone">
             <div class="sb-panel-hero-overlay">
               <div class="sb-panel-meta">Prop · Military · Hard Surface · 2024</div>
-              <div class="sb-panel-title">TA-312 Field Phone</div>
+              <div class="sb-panel-title reveal-rise">TA-312 Field Phone</div>
               <div class="sb-panel-cta">View all 4 renders →</div>
             </div>
           </div>
@@ -718,7 +787,7 @@ footer{padding:32px 48px;border-top:1px solid var(--line);display:flex;justify-c
             <img src="assets/renders/env_1.jpg" alt="Asian Street House">
             <div class="sb-panel-hero-overlay">
               <div class="sb-panel-meta">Environment · Stylized · Diorama · 2024</div>
-              <div class="sb-panel-title">Asian Street House</div>
+              <div class="sb-panel-title reveal-rise">Asian Street House</div>
               <div class="sb-panel-cta">View all 1 renders →</div>
             </div>
           </div>
@@ -788,7 +857,102 @@ function showPage(page){
   else window.scrollTo(0,0);
 }
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('.reveal,.reveal-clip,.reveal-rise,.reveal-blur').forEach(el=>obs.observe(el));
+
+// ── A: PARALLAX ──────────────────────────────────────────────────────────────
+
+
+// ── B: TYPEWRITER ─────────────────────────────────────────────────────────────
+(function() {
+  const el = document.getElementById('tw-text');
+  if (!el) return;
+  // HTML with em tag
+  const lines = [
+    { text: 'Pablo', html: false },
+    { text: '<br>', html: true },
+    { text: 'del ', html: false },
+    { text: '<em>Amo</em>', html: true },
+  ];
+  let output = '';
+  let charIndex = 0;
+  const fullHTML = 'Pablo<br>del <em>Amo</em>';
+  const stripped = fullHTML.replace(/<[^>]+>/g, '');
+  
+  // Build char-by-char with tags preserved
+  const segments = [];
+  let pos = 0;
+  let tagBuffer = '';
+  let inTag = false;
+  for (let i = 0; i < fullHTML.length; i++) {
+    if (fullHTML[i] === '<') { inTag = true; tagBuffer = '<'; }
+    else if (fullHTML[i] === '>' && inTag) {
+      tagBuffer += '>'; inTag = false;
+      segments.push({ type: 'tag', val: tagBuffer }); tagBuffer = '';
+    } else if (inTag) { tagBuffer += fullHTML[i]; }
+    else { segments.push({ type: 'char', val: fullHTML[i] }); }
+  }
+
+  let si = 0;
+  function type() {
+    if (si >= segments.length) {
+      // Done — remove cursor blink after a moment
+      setTimeout(() => {
+        const cur = document.querySelector('.tw-cursor');
+        if (cur) cur.style.display = 'none';
+      }, 1200);
+      return;
+    }
+    const seg = segments[si++];
+    if (seg.type === 'tag') {
+      output += seg.val;
+      el.innerHTML = output;
+      type(); // tags instant
+    } else {
+      output += seg.val;
+      el.innerHTML = output;
+      setTimeout(type, seg.val === ' ' ? 150 : 180);
+    }
+  }
+  setTimeout(type, 900);
+})();
+
+
+
+// ── D: CURTAIN REVEAL ─────────────────────────────────────────────────────────
+const curtainObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !e.target.classList.contains('curtain-sweep')) {
+      e.target.classList.add('curtain-sweep');
+      setTimeout(() => e.target.classList.add('curtain-done'), 650);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.reveal-curtain').forEach(el => curtainObs.observe(el));
+
+
+// Trigger curtain on album page elements when page becomes active
+const origShowPage = showPage;
+function showPageWithCurtain(page) {
+  origShowPage(page);
+  if (page !== 'home') {
+    setTimeout(() => {
+      document.querySelectorAll('#page-' + page + ' .reveal-curtain').forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.add('curtain-sweep');
+          setTimeout(() => el.classList.add('curtain-done'), 650);
+        }, i * 120);
+      });
+    }, 50);
+  }
+}
+// Override nav links to use new function
+document.querySelectorAll('.album-card').forEach(card => {
+  const orig = card.getAttribute('onclick');
+  if (orig) {
+    card.setAttribute('onclick', orig.replace('showPage(', 'showPageWithCurtain('));
+  }
+});
+
 </script>
 </body>
 </html>
