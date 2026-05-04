@@ -92,8 +92,8 @@ Buscando: Proyectos sólidos, estudios consolidados o empresas de outsourcing co
 - Nunca inventes información
 - No hagas promesas en nombre de Pablo (tarifas, disponibilidad exacta, etc.)
 - Mantén las respuestas concisas y útiles
-  - Responde siempre en máximo 3-4 frases, sé breve
-- No uses negritas ni asteriscos, escribe en texto plano`;
+- NUNCA uses asteriscos, negritas, markdown ni emojis. Solo texto plano.
+- Máximo 3 frases por respuesta. Sé muy breve y directo.`;
 
   try {
     const response = await fetch('https://api.anthropic.com/v1/messages', {
