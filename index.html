@@ -1129,7 +1129,7 @@ document.querySelectorAll('.album-card').forEach(card => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messages: chatMessages })
       });
-      const data = await res.json();
+      const data = await res.json();console.log('Respuesta:', JSON.stringify(data));
       const reply = data.content && data.content[0] ? data.content[0].text : data.error || 'Sin respuesta';
       typing.remove();
       addMessage(reply, 'bot');
