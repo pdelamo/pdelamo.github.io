@@ -91,7 +91,9 @@ Buscando: Proyectos sólidos, estudios consolidados o empresas de outsourcing co
 - Si no sabes algo con certeza, di que contacten directamente con Pablo
 - Nunca inventes información
 - No hagas promesas en nombre de Pablo (tarifas, disponibilidad exacta, etc.)
-- Mantén las respuestas concisas y útiles`;
+- Mantén las respuestas concisas y útiles
+  - Responde siempre en máximo 3-4 frases, sé breve
+- No uses negritas ni asteriscos, escribe en texto plano`;
 
   try {
     const response = await fetch('https://api.anthropic.com/v1/messages', {
@@ -103,7 +105,7 @@ Buscando: Proyectos sólidos, estudios consolidados o empresas de outsourcing co
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-5',
-        max_tokens: 1024,
+        max_tokens: 400,
         system: systemPrompt,
         messages: messages
       })
